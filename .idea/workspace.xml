@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e82e9e0f-4a7d-470d-8f07-2b3b5a039718" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WB1LVXfQA2ExCiDFMv4XcbJw2F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\SpellingCorrector\src\spell" />
+      <recent name="C:\Users\jacob\SpellingCorrector\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\SpellingCorrector" />
+      <recent name="C:\Users\jacob\SpellingCorrector\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Unnamed">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="spell.Main" />
+      <module name="SpellingCorrector" />
+      <option name="PROGRAM_PARAMETERS" value="words.txt bbig" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpellingCorrector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.SpellTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpellingCorrector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrieTest.testSingleWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpellingCorrector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
+      <option name="METHOD_NAME" value="testSingleWord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.SpellTest" />
+      <item itemvalue="JUnit.TrieTest" />
+      <item itemvalue="JUnit.TrieTest.testSingleWord" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TrieTest.testSingleWord" />
+        <item itemvalue="JUnit.TrieTest" />
+        <item itemvalue="JUnit.SpellTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e82e9e0f-4a7d-470d-8f07-2b3b5a039718" name="Default Changelist" comment="" />
+      <created>1578608117591</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578608117591</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4159" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578622905636">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4159" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578622905636" />
+    <state x="271" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/91.0.1445.864@91.0.1445.864" timestamp="1578620967285" />
+    <state x="4779" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1578617974598">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4779" y="232" key="#com.intellij.ide.util.MemberChooser/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578617974598" />
+    <state x="621" y="143" key="#com.intellij.ide.util.MemberChooser/91.0.1445.864@91.0.1445.864" timestamp="1578609620691" />
+    <state x="545" y="218" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578620941592">
+      <screen x="91" y="0" width="1445" height="864" />
+    </state>
+    <state x="545" y="218" key="#com.intellij.ide.util.TreeClassChooserDialog/91.0.1445.864@91.0.1445.864" timestamp="1578620941592" />
+    <state x="4178" y="337" key="FileChooserDialogImpl" timestamp="1578623648991">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4178" y="337" key="FileChooserDialogImpl/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623648991" />
+    <state x="282" y="208" key="FileChooserDialogImpl/91.0.1445.864@91.0.1445.864" timestamp="1578609002559" />
+    <state x="4958" y="594" key="Github.ShareDialog" timestamp="1578623753588">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4958" y="594" key="Github.ShareDialog/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623753588" />
+    <state width="2517" height="223" key="GridCell.Tab.0.bottom" timestamp="1578623421977">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="223" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623421977" />
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom/91.0.1445.864@91.0.1445.864" timestamp="1578620975173" />
+    <state width="2517" height="223" key="GridCell.Tab.0.center" timestamp="1578623421976">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="223" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623421976" />
+    <state width="2517" height="400" key="GridCell.Tab.0.center/91.0.1445.864@91.0.1445.864" timestamp="1578620975173" />
+    <state width="2517" height="223" key="GridCell.Tab.0.left" timestamp="1578623421976">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="223" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623421976" />
+    <state width="2517" height="400" key="GridCell.Tab.0.left/91.0.1445.864@91.0.1445.864" timestamp="1578620975173" />
+    <state width="2517" height="223" key="GridCell.Tab.0.right" timestamp="1578623421977">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="223" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623421977" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right/91.0.1445.864@91.0.1445.864" timestamp="1578620975173" />
+    <state x="4062" y="25" width="846" height="848" key="SettingsEditor" timestamp="1578617509191">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4062" y="25" key="SettingsEditor/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578617509191" />
+    <state x="77" y="16" width="846" height="848" key="SettingsEditor/91.0.1445.864@91.0.1445.864" timestamp="1578609048435" />
+    <state x="4817" y="298" width="606" height="804" key="find.popup" timestamp="1578621925533">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4817" y="298" width="606" height="804" key="find.popup/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578621925533" />
+    <state x="248" y="54" key="new project wizard" timestamp="1578609727832">
+      <screen x="91" y="0" width="1445" height="864" />
+    </state>
+    <state x="248" y="54" key="new project wizard/91.0.1445.864@91.0.1445.864" timestamp="1578609727832" />
+    <state x="4776" y="330" width="672" height="677" key="run.anything.popup" timestamp="1578621137519">
+      <screen x="3840" y="0" width="2560" height="1400" />
+    </state>
+    <state x="4776" y="330" width="672" height="677" key="run.anything.popup/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578621137519" />
+  </component>
+</project>

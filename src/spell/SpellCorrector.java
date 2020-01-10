@@ -23,7 +23,7 @@ public class SpellCorrector implements ISpellCorrector {
         while(errorFree) {
             try{
                 currentString = scanner.next();
-                trie_m.add(currentString);
+                trie.add(currentString);
             }
             catch(NoSuchElementException e) { // We have processed all of the words
                 errorFree = false;

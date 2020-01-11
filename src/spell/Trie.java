@@ -3,19 +3,55 @@ package spell;
 public class Trie implements ITrie {
 
     // A Trie is an array of arrays of Node objects
-
-    private Node root_m;
+    public Node root_m;
 
     // Constructor
     public Trie() {
         Node tempNode = new Node();
-        tempNode.isParentNode_m = true;
         this.root_m = tempNode;
     }
 
     @Override
     public void add(String word) {
-        // START HERE
+        word = word.toUpperCase();
+
+        // I need to parse through each char of the string
+        if(this.root_m.nodes_m[word.charAt(0)] == null) { // If the index of the first character of the root node is null
+
+            Node tempNode = new Node(); // Create new node
+            tempNode.ascii_value_m = (int)word.charAt(0); // Here we are type casting the char into an int to mark
+                // what its ascii_value_m is.
+            this.root_m.nodes_m[word.charAt(0)] = tempNode; // Set the root node to the tempNode
+
+
+            if (word.length() > 1) {
+                String choppedString = word.substring(1); // Cuts off the first char in the string
+                this.root_m.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString); //Start recursion off of the root node
+            }
+            // We are at the last char of String word
+            else {
+                // Increment the count because we are at the final char of the word
+                this.root_m.nodes_m[word.charAt(0)].count_m++;
+            }
+        }
+        else {
+            // Node with this letter has already been created at this level of the trie
+            if (word.length() > 1) {
+                String choppedString = word.substring(1); // Cuts off the first char in the string
+                this.root_m.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString);
+            }
+            // We are at the last char of String word
+            else {
+                // Increment the count because we are at the final char of the word
+                this.root_m.nodes_m[word.charAt(0)].count_m++;
+            }
+        }
+    }
+
+    public String toString() {
+        StringBuilder masterString = new StringBuilder();
+        this.root_m.createString(masterString);
+        return masterString.toString();
     }
 
     @Override

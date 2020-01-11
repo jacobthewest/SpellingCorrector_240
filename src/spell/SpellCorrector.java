@@ -1,6 +1,7 @@
 package spell;
 
 import java.awt.*;
+import java.awt.desktop.SystemSleepEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class SpellCorrector implements ISpellCorrector {
         scanner.useDelimiter("(\\s+)(#[^\\n]*\\n)?(\\s*)|(#[^\\n]*\\n)(\\s*)");  // This ignores comments and whitespace
 
         Trie trie = new Trie(); // Contains a parent node
+        trie.root_m.is_root_node_m = true;
 
         String currentString;
         boolean errorFree = true;
@@ -30,7 +32,8 @@ public class SpellCorrector implements ISpellCorrector {
             }
         }
 
-
+        System.out.println("Pay attention only here");
+        System.out.println(trie);// Testing our Trie's toString() function
 
         scanner.close();
     }

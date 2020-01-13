@@ -6,6 +6,7 @@ public class Node implements INode{
     public Node[] nodes_m;
     public int num_times_printed_m;
     public int ascii_value_m;
+
     final private int NUMBER_OF_ASCII_CHARACTERS = 255; // "final" is the same thing as "const" in C++
 
     // Constructor
@@ -17,33 +18,36 @@ public class Node implements INode{
         this.num_times_printed_m = -1;
     }
 
-    public void createString(StringBuilder masterStringBuilder) {
-        if (!this.is_root_node_m) {
-
-            char ascii_val_as_char = (char)this.ascii_value_m; // Cast ascii_value_m to a char
-            masterStringBuilder.append(ascii_val_as_char); // Add the char to our stringbuilder
-            System.out.print(ascii_val_as_char);
-
-            if (this.count_m > 0 && (this.count_m > this.num_times_printed_m)) { // We have the ending of a word
-
-                masterStringBuilder.append("\n"); // Add the new line to our stringbuilder
-                System.out.print("\n");
-                this.num_times_printed_m++; // Make it so we don't print this word again (unless it shows up more than once)
-            }
-        }
-
-        StringBuilder childrenAsStringBuilder = new StringBuilder();
-
-        for (int i = 0; i < this.nodes_m.length; i++) { // Just .length because it's a member variable of an array
-
-            // Only work with the node if it is actually a node and IS NOT null
-            if(this.nodes_m[i] != null) {
-                int tempInt = this.nodes_m[i].ascii_value_m;
-                char tempChar = (char)tempInt;
-                nodes_m[i].createString(childrenAsStringBuilder); // This will return a StringBuilder
-            }
-        }
-    }
+//    public void createString(StringBuilder masterStringBuilder) {
+//        if (!this.is_root_node_m) {
+//
+//            char ascii_val_as_char = (char)this.ascii_value_m; // Cast ascii_value_m to a char
+//            masterStringBuilder.append(ascii_val_as_char); // Add the char to our stringbuilder
+//            System.out.print(ascii_val_as_char);
+//
+//            if (this.count_m > 0 && (this.count_m > this.num_times_printed_m)) { // We have the ending of a word
+//
+//                masterStringBuilder.append("\n"); // Add the new line to our stringbuilder
+//                System.out.print("\n");
+//                this.num_times_printed_m++; // Make it so we don't print this word again (unless it shows up more than once)
+//            }
+//            else if (this.count_m == this.num_times_printed_m) {
+//
+//            }
+//        }
+//
+//        StringBuilder childrenAsStringBuilder = new StringBuilder();
+//
+//        for (int i = 0; i < this.nodes_m.length; i++) { // Just .length because it's a member variable of an array
+//
+//            // Only work with the node if it is actually a node and IS NOT null
+//            if(this.nodes_m[i] != null) {
+//                int tempInt = this.nodes_m[i].ascii_value_m;
+//                char tempChar = (char)tempInt;
+//                nodes_m[i].createString(childrenAsStringBuilder); // This will return a StringBuilder
+//            }
+//        }
+//    }
 
     public void makeRecursiveNodesFromString(String word) {  // word is coming in already uppercased
 

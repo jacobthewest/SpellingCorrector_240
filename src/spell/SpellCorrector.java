@@ -32,7 +32,6 @@ public class SpellCorrector implements ISpellCorrector {
             }
         }
 
-        System.out.println("Pay attention only here");
         System.out.println(trie);// Testing our Trie's toString() function
 
         scanner.close();

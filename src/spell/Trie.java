@@ -1,18 +1,23 @@
 package spell;
 
+import java.util.TreeSet;
+
 public class Trie implements ITrie {
 
     // A Trie is an array of arrays of Node objects
     public Node root_m;
+    public TreeSet<String> wordDictionary_m;
 
     // Constructor
     public Trie() {
         Node tempNode = new Node();
         this.root_m = tempNode;
+        this.wordDictionary_m = new TreeSet<String>();
     }
 
     @Override
     public void add(String word) {
+        this.wordDictionary_m.add(word);
         word = word.toUpperCase();
 
         // I need to parse through each char of the string
@@ -49,9 +54,12 @@ public class Trie implements ITrie {
     }
 
     public String toString() {
-        StringBuilder masterString = new StringBuilder();
-        this.root_m.createString(masterString);
-        return masterString.toString();
+        String returnMe = "";
+        for( String singleWord : this.wordDictionary_m )
+        {
+            returnMe = returnMe + singleWord + "\n";
+        }
+        return returnMe;
     }
 
     @Override

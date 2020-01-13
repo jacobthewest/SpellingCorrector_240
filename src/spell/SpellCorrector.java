@@ -32,7 +32,9 @@ public class SpellCorrector implements ISpellCorrector {
             }
         }
 
-        System.out.println(trie);// Testing our Trie's toString() function
+        //System.out.println(trie);// Testing our Trie's toString() function
+        System.out.println("Here is the node count: " + trie.nodeCount_m);
+        System.out.println("Here is the word count: " + trie.getWordCount());
 
         scanner.close();
     }

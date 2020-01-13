@@ -18,43 +18,14 @@ public class Node implements INode{
         this.num_times_printed_m = -1;
     }
 
-//    public void createString(StringBuilder masterStringBuilder) {
-//        if (!this.is_root_node_m) {
-//
-//            char ascii_val_as_char = (char)this.ascii_value_m; // Cast ascii_value_m to a char
-//            masterStringBuilder.append(ascii_val_as_char); // Add the char to our stringbuilder
-//            System.out.print(ascii_val_as_char);
-//
-//            if (this.count_m > 0 && (this.count_m > this.num_times_printed_m)) { // We have the ending of a word
-//
-//                masterStringBuilder.append("\n"); // Add the new line to our stringbuilder
-//                System.out.print("\n");
-//                this.num_times_printed_m++; // Make it so we don't print this word again (unless it shows up more than once)
-//            }
-//            else if (this.count_m == this.num_times_printed_m) {
-//
-//            }
-//        }
-//
-//        StringBuilder childrenAsStringBuilder = new StringBuilder();
-//
-//        for (int i = 0; i < this.nodes_m.length; i++) { // Just .length because it's a member variable of an array
-//
-//            // Only work with the node if it is actually a node and IS NOT null
-//            if(this.nodes_m[i] != null) {
-//                int tempInt = this.nodes_m[i].ascii_value_m;
-//                char tempChar = (char)tempInt;
-//                nodes_m[i].createString(childrenAsStringBuilder); // This will return a StringBuilder
-//            }
-//        }
-//    }
-
-    public void makeRecursiveNodesFromString(String word) {  // word is coming in already uppercased
+    public int makeRecursiveNodesFromString(String word, int tempNodeCount) {  // word is coming in already uppercased
 
         // I need to parse through each char of the string
         if(this.nodes_m[word.charAt(0)] == null) {
 
             Node tempNode = new Node(); // Create new node
+            tempNodeCount++;
+            //System.out.print("here is the tempNodeCount: " + tempNodeCount);
             tempNode.ascii_value_m = (int)word.charAt(0); // Here we are type casting the char into an int to mark
                 // what its ascii_value_m is.
             this.nodes_m[word.charAt(0)] = tempNode; // Set the root node to the tempNode
@@ -62,7 +33,8 @@ public class Node implements INode{
 
             if (word.length() > 1) {
                 String choppedString = word.substring(1); // Cuts off the first char in the string
-                this.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString);
+                tempNodeCount = this.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString, tempNodeCount);
+                //System.out.print("here is the tempNodeCount: " + tempNodeCount);
             }
             // We are at the last char of String word
             else {
@@ -73,7 +45,8 @@ public class Node implements INode{
         else {
             if (word.length() > 1) {
                 String choppedString = word.substring(1); // Cuts off the first char in the string
-                this.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString);
+                tempNodeCount = this.nodes_m[word.charAt(0)].makeRecursiveNodesFromString(choppedString, tempNodeCount);
+                //System.out.print("here is the tempNodeCount: " + tempNodeCount);
             }
             // We are at the last char of String word
             else {
@@ -81,6 +54,8 @@ public class Node implements INode{
                 this.nodes_m[word.charAt(0)].count_m++;
             }
         }
+
+        return  tempNodeCount;
     }
 
     @Override

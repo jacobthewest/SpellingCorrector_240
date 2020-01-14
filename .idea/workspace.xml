@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e82e9e0f-4a7d-470d-8f07-2b3b5a039718" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jacob.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jacob.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jacob.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jacob.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/passoff/TrieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/passoff/TrieTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spell/SpellCorrector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spell/SpellCorrector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spell/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spell/Trie.java" afterDir="false" />
     </list>
@@ -11,6 +12,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SpellingCorrector" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,7 +52,7 @@
       <recent name="C:\Users\jacob\SpellingCorrector\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrieTest.testMoreEquals">
+  <component name="RunManager" selected="JUnit.SpellTest">
     <configuration name="my own thing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="spell.Main" />
       <module name="SpellingCorrector" />
@@ -87,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieTest.testDuplicateNodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrieTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpellingCorrector" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +101,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="passoff" />
       <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
-      <option name="METHOD_NAME" value="testDuplicateNodes" />
+      <option name="METHOD_NAME" value="testEquals" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieTest.testSingleWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrieTest.testMoreHashCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpellingCorrector" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +133,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="passoff" />
       <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
-      <option name="METHOD_NAME" value="testSingleWord" />
+      <option name="METHOD_NAME" value="testMoreHashCode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,19 +141,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.my own thing" />
-      <item itemvalue="JUnit.SpellTest" />
       <item itemvalue="JUnit.TrieTest" />
-      <item itemvalue="JUnit.TrieTest.testSingleWord" />
-      <item itemvalue="JUnit.TrieTest.testDuplicateNodes" />
       <item itemvalue="JUnit.TrieTest.testMoreEquals" />
+      <item itemvalue="JUnit.TrieTest.testEquals" />
+      <item itemvalue="JUnit.TrieTest.testMoreHashCode" />
+      <item itemvalue="JUnit.SpellTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrieTest.testMoreEquals" />
-        <item itemvalue="JUnit.TrieTest" />
-        <item itemvalue="JUnit.TrieTest.testDuplicateNodes" />
-        <item itemvalue="JUnit.TrieTest.testSingleWord" />
         <item itemvalue="JUnit.SpellTest" />
+        <item itemvalue="JUnit.TrieTest" />
+        <item itemvalue="JUnit.TrieTest.testMoreHashCode" />
+        <item itemvalue="JUnit.TrieTest.testEquals" />
+        <item itemvalue="JUnit.TrieTest.testMoreEquals" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +183,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="652" y="324" key="#com.intellij.debugger.ui.breakpoints.BreakpointsConfigurationDialogFactory.BreakpointsConfigurationDialog.AddFieldBreakpointDialog" timestamp="1579027694608">
+      <screen x="91" y="0" width="1445" height="864" />
+    </state>
+    <state x="652" y="324" key="#com.intellij.debugger.ui.breakpoints.BreakpointsConfigurationDialogFactory.BreakpointsConfigurationDialog.AddFieldBreakpointDialog/91.0.1445.864@91.0.1445.864" timestamp="1579027694608" />
     <state x="271" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579025696903">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
@@ -208,68 +216,68 @@
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
     <state x="4958" y="594" key="Github.ShareDialog/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623753588" />
-    <state width="1402" height="257" key="GridCell.Tab.0.bottom" timestamp="1579027391365">
+    <state width="1402" height="257" key="GridCell.Tab.0.bottom" timestamp="1579037053631">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.bottom/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
     <state width="1397" height="955" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578959283117" />
     <state width="2517" height="223" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579027391365" />
-    <state width="1402" height="257" key="GridCell.Tab.0.center" timestamp="1579027391364">
+    <state width="1402" height="257" key="GridCell.Tab.0.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579037053631" />
+    <state width="1402" height="257" key="GridCell.Tab.0.center" timestamp="1579037053631">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.center/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
     <state width="1397" height="955" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578959283117" />
     <state width="2517" height="223" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.center/91.0.1445.864@91.0.1445.864" timestamp="1579027391364" />
-    <state width="1402" height="257" key="GridCell.Tab.0.left" timestamp="1579027391364">
+    <state width="1402" height="257" key="GridCell.Tab.0.center/91.0.1445.864@91.0.1445.864" timestamp="1579037053631" />
+    <state width="1402" height="257" key="GridCell.Tab.0.left" timestamp="1579037053630">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.left/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
     <state width="1397" height="955" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578959283116" />
     <state width="2517" height="223" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013182" />
-    <state width="1402" height="257" key="GridCell.Tab.0.left/91.0.1445.864@91.0.1445.864" timestamp="1579027391364" />
-    <state width="1402" height="257" key="GridCell.Tab.0.right" timestamp="1579027391364">
+    <state width="1402" height="257" key="GridCell.Tab.0.left/91.0.1445.864@91.0.1445.864" timestamp="1579037053630" />
+    <state width="1402" height="257" key="GridCell.Tab.0.right" timestamp="1579037053631">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.right/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
     <state width="1397" height="955" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578959283117" />
     <state width="2517" height="223" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.right/91.0.1445.864@91.0.1445.864" timestamp="1579027391364" />
-    <state width="1402" height="278" key="GridCell.Tab.1.bottom" timestamp="1579027385966">
+    <state width="1402" height="257" key="GridCell.Tab.0.right/91.0.1445.864@91.0.1445.864" timestamp="1579037053631" />
+    <state width="1402" height="278" key="GridCell.Tab.1.bottom" timestamp="1579036891942">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.bottom/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456471" />
     <state width="1397" height="940" key="GridCell.Tab.1.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578958949723" />
-    <state width="1402" height="278" key="GridCell.Tab.1.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579027385966" />
-    <state width="1402" height="278" key="GridCell.Tab.1.center" timestamp="1579027385965">
+    <state width="1402" height="278" key="GridCell.Tab.1.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
+    <state width="1402" height="278" key="GridCell.Tab.1.center" timestamp="1579036891942">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.center/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
     <state width="1397" height="940" key="GridCell.Tab.1.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578958949723" />
-    <state width="1402" height="278" key="GridCell.Tab.1.center/91.0.1445.864@91.0.1445.864" timestamp="1579027385965" />
-    <state width="1402" height="278" key="GridCell.Tab.1.left" timestamp="1579027385965">
+    <state width="1402" height="278" key="GridCell.Tab.1.center/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
+    <state width="1402" height="278" key="GridCell.Tab.1.left" timestamp="1579036891942">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.left/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
     <state width="1397" height="940" key="GridCell.Tab.1.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578958949723" />
-    <state width="1402" height="278" key="GridCell.Tab.1.left/91.0.1445.864@91.0.1445.864" timestamp="1579027385965" />
-    <state width="1402" height="278" key="GridCell.Tab.1.right" timestamp="1579027385966">
+    <state width="1402" height="278" key="GridCell.Tab.1.left/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
+    <state width="1402" height="278" key="GridCell.Tab.1.right" timestamp="1579036891942">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.right/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
     <state width="1397" height="940" key="GridCell.Tab.1.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1578958949723" />
-    <state width="1402" height="278" key="GridCell.Tab.1.right/91.0.1445.864@91.0.1445.864" timestamp="1579027385966" />
+    <state width="1402" height="278" key="GridCell.Tab.1.right/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
     <state x="4062" y="25" width="846" height="848" key="SettingsEditor" timestamp="1578617509191">
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
     <state x="4062" y="25" key="SettingsEditor/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578617509191" />
     <state x="77" y="16" width="846" height="848" key="SettingsEditor/91.0.1445.864@91.0.1445.864" timestamp="1578609048435" />
-    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579027100324">
+    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579027838627">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state x="-1143" y="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578703863341" />
-    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864@91.0.1445.864" timestamp="1579027100324" />
+    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864@91.0.1445.864" timestamp="1579027838627" />
     <state x="91" y="0" width="1203" height="948" key="dock-window-1" timestamp="1578698857773">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
@@ -305,6 +313,22 @@
     </state>
     <state x="-1055" y="118" width="672" height="1978" key="search.everywhere.popup/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578702424036" />
     <state x="477" y="182" width="672" height="678" key="search.everywhere.popup/91.0.1445.864@91.0.1445.864" timestamp="1578953880703" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/spell/Trie.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/passoff/TrieTest.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SpellingCorrector$my_own_thing.ic" NAME="my own thing Coverage Results" MODIFIED="1578985334318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

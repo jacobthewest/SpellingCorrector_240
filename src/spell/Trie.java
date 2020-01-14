@@ -8,6 +8,7 @@ public class Trie implements ITrie {
     public Node root;
     public int nodeCount;
     public int wordCount;
+    public int hashCode;
 
     // Constructor
     public Trie() {
@@ -15,6 +16,7 @@ public class Trie implements ITrie {
         this.root = new Node();
         this.nodeCount = 1;
         this.wordCount = 0;
+        this.hashCode = 0;
     }
 
     @Override
@@ -27,24 +29,36 @@ public class Trie implements ITrie {
                 tempNode.nodes[index] = new Node();
                 nodeCount++;
                 tempNode.nodes[index].previousChars = word.substring(0, i + 1);
-                if (i == (word.length() - 1)) {
+                if (i == (word.length() - 1)) { // End of word
                     wordCount++;
                     tempNode.nodes[index].count++;
+                    convertPrevcharsToIntsAndAddToHash(tempNode.nodes[index].previousChars);
                 }
                 tempNode = tempNode.nodes[index];
             }
             else {
-                if ((word.length() - 1) == i) {
+                if ((word.length() - 1) == i) {  // End of word
                     tempNode.nodes[index].count++;
                     if(tempNode.nodes[index].count <= 1) {
                         wordCount++;
                     }
+                    convertPrevcharsToIntsAndAddToHash(tempNode.nodes[index].previousChars);
                 }
                 else {
                     tempNode = tempNode.nodes[index];
                 }
             }
         }
+    }
+
+    public void convertPrevcharsToIntsAndAddToHash(String previousChars) {
+        int sum = 0;
+        for (int i = 0; i < previousChars.length(); i++) {
+            int charAsInt = previousChars.charAt(i);
+            charAsInt *= i;
+            sum += charAsInt;
+        }
+        hashCode += sum;
     }
 
     public void recToString(StringBuilder masterString, Node tempNode) {
@@ -106,7 +120,6 @@ public class Trie implements ITrie {
 
     @Override
     public int hashCode() {
-        int hashCode = (getWordCount() * 7) + (getNodeCount() * 666); // 7 because it's holy. 666 because its evil.
         return hashCode;
     }
 
@@ -144,8 +157,13 @@ public class Trie implements ITrie {
             if (n1.nodes[i] != null && n2.nodes[i] == null) {return false;}
 
             if ((n1.nodes[i] != null) && (n2.nodes[i] != null)) {
+                if (n1.nodes[i].count != n2.nodes[i].count) { return false; } // Need to have the same words end
+                    // at the same time. Even if they have the same node path.
+
                 // Call recursively to compare the child node root words again
-                recCompare(n1.nodes[i], n2.nodes[i]);
+                if(!recCompare(n1.nodes[i], n2.nodes[i])) { // Make sure that we escape all of the for loops here.
+                    return false;
+                }
             }
         }
         return true;

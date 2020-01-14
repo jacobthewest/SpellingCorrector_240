@@ -87,7 +87,7 @@ public class TrieTest {
         assertTrue(studentTrie.equals(studentTrie), "Trie found not equal to itself");
         assertFalse(studentTrie.equals(null), "Trie equal to null");
         assertFalse(studentTrie.equals(new String("String")), "Trie equal to a String object");
-        assertFalse(studentTrie.equals(studentTrie2), "Unequal Trie objects found equal (student trie has word \"car\", where other trie doesn\'t)");
+        assertFalse(studentTrie.equals(studentTrie2), "Unequal Trie objects found equal (student trie has word \\\"car\\\", where other trie doesn\'t)");
         studentTrie2.add("car");
         assertTrue(studentTrie.equals(studentTrie2), "Equal Trie objects found unequal");
         assertEquals(studentTrie.equals(studentTrie2), studentTrie2.equals(studentTrie), "Trie\'s equals() method is not commutative");
@@ -169,6 +169,8 @@ public class TrieTest {
     public void testMoreHashCode(){
         studentTrie.add("dat"); //word: 1 node: 4
         studentTrie2.add("far"); //word: 1 node: 4
+        System.out.println(studentTrie.hashCode());
+        System.out.println(studentTrie2.hashCode());
         assertNotEquals(studentTrie.hashCode(), studentTrie2.hashCode(), "The hashCode is too simple. Different Tries return same hashCode");
 
         studentTrie.add("far"); //word: 2 node: 7

@@ -30,7 +30,8 @@ public class SpellCorrector implements ISpellCorrector {
                 errorFree = false;
             }
         }
-
+        System.out.println("Word count: " + trie.wordCount);
+        System.out.println("Node count: " + trie.nodeCount);
         scanner.close();
     }
 

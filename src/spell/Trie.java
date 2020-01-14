@@ -36,6 +36,9 @@ public class Trie implements ITrie {
             else {
                 if ((word.length() - 1) == i) {
                     tempNode.nodes[index].count++;
+                    if(tempNode.nodes[index].count <= 1) {
+                        wordCount++;
+                    }
                 }
                 else {
                     tempNode = tempNode.nodes[index];
@@ -116,15 +119,22 @@ public class Trie implements ITrie {
             return false;
         }
         Trie sketchyTrie = (Trie)o;
-        recCompare(this.root, sketchyTrie.root);
-        return true;
+        if (sketchyTrie.root == null) {
+            return false;
+        }
+        boolean returnValueOfRecCompare =  recCompare(this.root, sketchyTrie.root);
+        return returnValueOfRecCompare;
     }
 
     public boolean recCompare(Node n1, Node n2) {
-
         // Compare the nodes root words
-        if(!(n1.previousChars.equals(n2.previousChars))) {
-            return false; // They don't have the same root word
+        try {
+            if(!(n1.previousChars.equals(n2.previousChars))) {
+                return false; // They don't have the same root word
+            }
+        }
+        catch(NullPointerException e) {
+            // Both of the previousChars are null.
         }
 
         // Recursively compare the nodes children

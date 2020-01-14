@@ -5,72 +5,65 @@ import java.util.TreeSet;
 public class Trie implements ITrie {
 
     // A Trie is an array of arrays of Node objects
-    public Node root_m;
-    public int nodeCount_m;
+    public Node root;
+    public int nodeCount;
+    public int wordCount;
 
     // Constructor
     public Trie() {
         Node tempNode = new Node();
-        this.root_m = tempNode;
-        this.nodeCount_m = 1;
+        this.root = new Node();
+        this.nodeCount = 1;
+        this.wordCount = 0;
     }
 
     @Override
     public void add(String word) {
-        int tempNodeCount = 0;
-        int index = Character.toUpperCase(word.charAt(0));
+        Node tempNode = root;
+        for (int i = 0; i < word.length(); i++) {
+            int index = word.charAt(i) - 'a';
 
-        // I need to parse through each char of the string
-        if(this.root_m.nodes_m[index] == null) { // If the index of the first character of the root node is null
-
-            Node tempNode = new Node(); // Create new node
-            tempNode.ascii_value_m = (int)word.charAt(0); // Here we are type casting the char into an int to mark
-                // what its ascii_value_m is.
-            tempNode.value_m = word.charAt(0);
-            System.out.print(Character.toString((tempNode.value_m)));
-            tempNodeCount += 1; // Because we've already counted the root node, this is for a child node in the root nodes array
-
-            this.root_m.nodes_m[index] = tempNode; // Set the root node to the tempNode
-
-            if (word.length() > 1) {
-                String choppedString = word.substring(1); // Cuts off the first char in the string
-                index = Character.toUpperCase(word.charAt(0));
-                String previousChars = Character.toString(root_m.nodes_m[index].value_m);
-                tempNodeCount = this.root_m.nodes_m[index].makeRecursiveNodesFromString(choppedString, tempNodeCount, previousChars); //Start recursion off of the root node
+            if (tempNode.nodes[index] == null) {
+                tempNode.nodes[index] = new Node();
+                nodeCount++;
+                tempNode.nodes[index].previousChars = word.substring(0, i + 1);
+                if (i == (word.length() - 1)) {
+                    wordCount++;
+                    tempNode.nodes[index].count++;
+                }
+                tempNode = tempNode.nodes[index];
             }
-            // We are at the last char of String word
             else {
-                // Increment the count because we are at the final char of the word
-                this.root_m.nodes_m[index].count_m++;
+                if ((word.length() - 1) == i) {
+                    tempNode.nodes[index].count++;
+                }
+                else {
+                    tempNode = tempNode.nodes[index];
+                }
             }
         }
-        else {
-            // Node with this letter has already been created at this level of the trie
-            if (word.length() > 1) {
-                String choppedString = word.substring(1); // Cuts off the first char in the string
-                index = Character.toUpperCase(word.charAt(0));
-                String previousChars = Character.toString(root_m.nodes_m[index].value_m);
-                tempNodeCount = this.root_m.nodes_m[index].makeRecursiveNodesFromString(choppedString, tempNodeCount, previousChars);
-            }
-            // We are at the last char of String word
-            else {
-                // Increment the count because we are at the final char of the word
-                this.root_m.nodes_m[index].count_m++;
-            }
+    }
+
+    public void recToString(StringBuilder masterString, Node tempNode) {
+        if (tempNode == null) {
+            return;
+        }
+        else if (tempNode.count > 0) {
+            masterString.append(tempNode.previousChars + "\n"); // Found the end of the word
         }
 
-        this.nodeCount_m += tempNodeCount;
-        System.out.print("\n");
+        for(int i = 0; i < tempNode.nodes.length; i++) {
+            if (tempNode.nodes[i] != null) {
+                Node childNode = tempNode.nodes[i];
+                recToString(masterString, childNode);
+            }
+        }
     }
 
     public String toString() {
-//        StringBuilder masterString = new StringBuilder();
-//        this.root_m.createString(masterString, "");
-//        return masterString.toString();
-        StringBuilder curr_w = new StringBuilder();
-        StringBuilder res = new StringBuilder();
-        this.root_m.recToString(curr_w,res,this.root_m);
-        return res.toString();
+        StringBuilder masterString = new StringBuilder();
+        recToString(masterString, root);
+        return masterString.toString();
     }
 
 
@@ -82,12 +75,12 @@ public class Trie implements ITrie {
 
     @Override
     public int getWordCount() {
-        return 0;
+        return wordCount;
     }
 
     @Override
     public int getNodeCount() {
-        return this.nodeCount_m;
+        return nodeCount;
     }
 
     @Override
@@ -105,11 +98,30 @@ public class Trie implements ITrie {
             return false;
         }
         Trie sketchyTrie = (Trie)o;
-        compare(this.root_m, sketchyTrie.root_m);
+        compare(this.root, sketchyTrie.root);
         return true;
     }
 
     public boolean compare(Node n1, Node n2) {
         return true;
+    }
+
+    public class Node implements INode {
+        public int count;
+        public Node[] nodes;
+        public String previousChars;
+
+        public Node() {
+            count = 0;
+            nodes = new Node[26];
+        }
+        /**
+         * Returns the frequency count for the word represented by the node
+         *
+         * @return The frequency count for the word represented by the node
+         */
+        public int getValue() {
+            return this.count;
+        }
     }
 }

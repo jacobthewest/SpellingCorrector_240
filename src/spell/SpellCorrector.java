@@ -17,7 +17,6 @@ public class SpellCorrector implements ISpellCorrector {
         scanner.useDelimiter("(\\s+)(#[^\\n]*\\n)?(\\s*)|(#[^\\n]*\\n)(\\s*)");  // This ignores comments and whitespace
 
         Trie trie = new Trie(); // Contains a parent node
-        trie.root_m.is_root_node_m = true;
 
         String currentString;
         boolean errorFree = true;
@@ -33,7 +32,7 @@ public class SpellCorrector implements ISpellCorrector {
         }
 
         //System.out.println("Below is our trie.toSting()");
-        //System.out.println(trie);
+        System.out.println(trie);
 
         //System.out.println(trie);// Testing our Trie's toString() function
 //        System.out.println("Here is the node count: " + trie.nodeCount_m);

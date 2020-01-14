@@ -69,7 +69,25 @@ public class Trie implements ITrie {
 
     @Override
     public INode find(String word) {
+        Node tempNode = root;
+        for(int i = 0; i < word.length(); i++) {
+            int index = word.charAt(i) - 'a';
+            if (tempNode.nodes[index] == null) {
+                return null; // Node doesn't exist
+            }
 
+            // We are on the last character of the word, we have found the node, and we are double checking
+                // that it has a word created there
+            if (word.length() - 1 == i) {
+                if (tempNode.nodes[index].count > 0) {
+                    return tempNode.nodes[index];
+                }
+                else {
+                    return null; // A word doesn't exist at this point
+                }
+            }
+            tempNode = tempNode.nodes[index];
+        }
         return null;
     }
 
@@ -98,11 +116,28 @@ public class Trie implements ITrie {
             return false;
         }
         Trie sketchyTrie = (Trie)o;
-        compare(this.root, sketchyTrie.root);
+        recCompare(this.root, sketchyTrie.root);
         return true;
     }
 
-    public boolean compare(Node n1, Node n2) {
+    public boolean recCompare(Node n1, Node n2) {
+
+        // Compare the nodes root words
+        if(!(n1.previousChars.equals(n2.previousChars))) {
+            return false; // They don't have the same root word
+        }
+
+        // Recursively compare the nodes children
+        for(int i = 0; i < n1.nodes.length; i++) {
+            // Is one child null and the other child not null?
+            if (n1.nodes[i] == null && n2.nodes[i] != null) {return false;}
+            if (n1.nodes[i] != null && n2.nodes[i] == null) {return false;}
+
+            if ((n1.nodes[i] != null) && (n2.nodes[i] != null)) {
+                // Call recursively to compare the child node root words again
+                recCompare(n1.nodes[i], n2.nodes[i]);
+            }
+        }
         return true;
     }
 

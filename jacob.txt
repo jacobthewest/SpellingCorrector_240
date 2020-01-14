@@ -4,3 +4,18 @@ kicker
 apple
 ape
 brick
+
+// What I need to do
+    Implement the TA's recursive function
+        Here are my notes from that
+            object is not null
+            instance of trie
+            this == 0
+            Trie newTrie = (Trie)o;
+        Before calling the function, make sure the nodes are not null
+
+    Make the toString work with my past picture
+        Track previousChars
+            pass in this.previousChars in the makeRecursiveFunction (set root string to be "");
+        I don't need to track the number of times it was printed
+        Test with the use cases again

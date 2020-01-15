@@ -186,5 +186,9 @@ public class Trie implements ITrie {
         public int getValue() {
             return this.count;
         }
+
+        public String getPreviousChars() {
+            return this.previousChars;
+        }
     }
 }

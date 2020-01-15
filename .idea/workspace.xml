@@ -4,7 +4,6 @@
     <list default="true" id="e82e9e0f-4a7d-470d-8f07-2b3b5a039718" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spell/SpellCorrector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spell/SpellCorrector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/spell/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/spell/Trie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,7 @@
       <recent name="C:\Users\jacob\SpellingCorrector\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SpellTest.testAlteration">
+  <component name="RunManager" selected="JUnit.TrieTest">
     <configuration name="my own thing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="spell.Main" />
       <module name="SpellingCorrector" />
@@ -90,6 +89,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpellTest.testInsertion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpellingCorrector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.SpellTest" />
+      <option name="METHOD_NAME" value="testInsertion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpellTest.testValidWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpellingCorrector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.SpellTest" />
+      <option name="METHOD_NAME" value="testValidWord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpellingCorrector" />
       <extension name="coverage">
@@ -105,53 +136,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpellingCorrector" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoff.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoff" />
-      <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
-      <option name="METHOD_NAME" value="testEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrieTest.testMoreHashCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpellingCorrector" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoff.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoff" />
-      <option name="MAIN_CLASS_NAME" value="passoff.TrieTest" />
-      <option name="METHOD_NAME" value="testMoreHashCode" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.my own thing" />
       <item itemvalue="JUnit.TrieTest" />
-      <item itemvalue="JUnit.TrieTest.testEquals" />
-      <item itemvalue="JUnit.TrieTest.testMoreHashCode" />
       <item itemvalue="JUnit.SpellTest" />
       <item itemvalue="JUnit.SpellTest.testAlteration" />
+      <item itemvalue="JUnit.SpellTest.testValidWord" />
+      <item itemvalue="JUnit.SpellTest.testInsertion" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpellTest.testAlteration" />
-        <item itemvalue="JUnit.SpellTest" />
         <item itemvalue="JUnit.TrieTest" />
-        <item itemvalue="JUnit.TrieTest.testMoreHashCode" />
-        <item itemvalue="JUnit.TrieTest.testEquals" />
+        <item itemvalue="JUnit.SpellTest" />
+        <item itemvalue="JUnit.SpellTest.testInsertion" />
+        <item itemvalue="JUnit.SpellTest.testValidWord" />
+        <item itemvalue="JUnit.SpellTest.testAlteration" />
       </list>
     </recent_temporary>
   </component>
@@ -214,58 +213,58 @@
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
     <state x="4958" y="594" key="Github.ShareDialog/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578623753588" />
-    <state width="1398" height="940" key="GridCell.Tab.0.bottom" timestamp="1579048044358">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1402" height="256" key="GridCell.Tab.0.bottom" timestamp="1579061621784">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.bottom/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
-    <state width="1398" height="940" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048044358" />
+    <state width="1398" height="940" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
     <state width="2517" height="223" key="GridCell.Tab.0.bottom/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579037080265" />
-    <state width="1398" height="940" key="GridCell.Tab.0.center" timestamp="1579048044357">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1402" height="256" key="GridCell.Tab.0.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579061621784" />
+    <state width="1402" height="256" key="GridCell.Tab.0.center" timestamp="1579061621783">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.center/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
-    <state width="1398" height="940" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048044357" />
+    <state width="1398" height="940" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
     <state width="2517" height="223" key="GridCell.Tab.0.center/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.center/91.0.1445.864@91.0.1445.864" timestamp="1579037080265" />
-    <state width="1398" height="940" key="GridCell.Tab.0.left" timestamp="1579048044357">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1402" height="256" key="GridCell.Tab.0.center/91.0.1445.864@91.0.1445.864" timestamp="1579061621783" />
+    <state width="1402" height="256" key="GridCell.Tab.0.left" timestamp="1579061621783">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.left/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
-    <state width="1398" height="940" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048044357" />
+    <state width="1398" height="940" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
     <state width="2517" height="223" key="GridCell.Tab.0.left/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013182" />
-    <state width="1402" height="257" key="GridCell.Tab.0.left/91.0.1445.864@91.0.1445.864" timestamp="1579037080265" />
-    <state width="1398" height="940" key="GridCell.Tab.0.right" timestamp="1579048044357">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1402" height="256" key="GridCell.Tab.0.left/91.0.1445.864@91.0.1445.864" timestamp="1579061621783" />
+    <state width="1402" height="256" key="GridCell.Tab.0.right" timestamp="1579061621784">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="437" key="GridCell.Tab.0.right/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704497930" />
-    <state width="1398" height="940" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048044357" />
+    <state width="1398" height="940" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
     <state width="2517" height="223" key="GridCell.Tab.0.right/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578624013183" />
-    <state width="1402" height="257" key="GridCell.Tab.0.right/91.0.1445.864@91.0.1445.864" timestamp="1579037080265" />
-    <state width="1398" height="940" key="GridCell.Tab.1.bottom" timestamp="1579048018894">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1402" height="256" key="GridCell.Tab.0.right/91.0.1445.864@91.0.1445.864" timestamp="1579061621784" />
+    <state width="1402" height="278" key="GridCell.Tab.1.bottom" timestamp="1579061414081">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.bottom/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456471" />
-    <state width="1398" height="940" key="GridCell.Tab.1.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048018894" />
-    <state width="1402" height="278" key="GridCell.Tab.1.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
-    <state width="1398" height="940" key="GridCell.Tab.1.center" timestamp="1579048018894">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1398" height="940" key="GridCell.Tab.1.bottom/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
+    <state width="1402" height="278" key="GridCell.Tab.1.bottom/91.0.1445.864@91.0.1445.864" timestamp="1579061414081" />
+    <state width="1402" height="278" key="GridCell.Tab.1.center" timestamp="1579061414081">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.center/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
-    <state width="1398" height="940" key="GridCell.Tab.1.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048018894" />
-    <state width="1402" height="278" key="GridCell.Tab.1.center/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
-    <state width="1398" height="940" key="GridCell.Tab.1.left" timestamp="1579048018893">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1398" height="940" key="GridCell.Tab.1.center/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
+    <state width="1402" height="278" key="GridCell.Tab.1.center/91.0.1445.864@91.0.1445.864" timestamp="1579061414081" />
+    <state width="1402" height="278" key="GridCell.Tab.1.left" timestamp="1579061414081">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.left/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
-    <state width="1398" height="940" key="GridCell.Tab.1.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048018893" />
-    <state width="1402" height="278" key="GridCell.Tab.1.left/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
-    <state width="1398" height="940" key="GridCell.Tab.1.right" timestamp="1579048018894">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state width="1398" height="940" key="GridCell.Tab.1.left/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
+    <state width="1402" height="278" key="GridCell.Tab.1.left/91.0.1445.864@91.0.1445.864" timestamp="1579061414081" />
+    <state width="1402" height="278" key="GridCell.Tab.1.right" timestamp="1579061414081">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state width="1397" height="940" key="GridCell.Tab.1.right/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578704456470" />
-    <state width="1398" height="940" key="GridCell.Tab.1.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048018894" />
-    <state width="1402" height="278" key="GridCell.Tab.1.right/91.0.1445.864@91.0.1445.864" timestamp="1579036891942" />
+    <state width="1398" height="940" key="GridCell.Tab.1.right/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579049120159" />
+    <state width="1402" height="278" key="GridCell.Tab.1.right/91.0.1445.864@91.0.1445.864" timestamp="1579061414081" />
     <state x="4062" y="25" width="846" height="848" key="SettingsEditor" timestamp="1578617509191">
       <screen x="3840" y="0" width="2560" height="1400" />
     </state>
@@ -275,11 +274,11 @@
       <screen x="3840" y="0" width="1440" height="2520" />
     </state>
     <state x="4369" y="1177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048931786" />
-    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579027838627">
+    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579060902477">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state x="-1143" y="583" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578703863341" />
-    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864@91.0.1445.864" timestamp="1579027838627" />
+    <state x="389" y="263" width="843" height="601" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/91.0.1445.864@91.0.1445.864" timestamp="1579060902477" />
     <state x="91" y="0" width="1203" height="948" key="dock-window-1" timestamp="1578698857773">
       <screen x="91" y="0" width="1445" height="864" />
     </state>
@@ -310,12 +309,12 @@
     <state x="4366" y="595" width="379" height="1220" key="run.anything.popup/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579042733639" />
     <state x="4776" y="330" width="672" height="677" key="run.anything.popup/91.0.1445.864/3840.0.2560.1400@3840.0.2560.1400" timestamp="1578621137519" />
     <state x="619" y="204" width="380" height="418" key="run.anything.popup/91.0.1445.864@91.0.1445.864" timestamp="1579025924410" />
-    <state x="4225" y="531" width="672" height="1978" key="search.everywhere.popup" timestamp="1579048236396">
-      <screen x="3840" y="0" width="1440" height="2520" />
+    <state x="477" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1579059142080">
+      <screen x="91" y="0" width="1445" height="864" />
     </state>
     <state x="-1055" y="118" width="672" height="1978" key="search.everywhere.popup/91.0.1445.864/-1440.-413.1440.2520@-1440.-413.1440.2520" timestamp="1578702424036" />
     <state x="4225" y="531" width="672" height="1978" key="search.everywhere.popup/91.0.1445.864/3840.0.1440.2520@3840.0.1440.2520" timestamp="1579048236396" />
-    <state x="477" y="182" width="672" height="678" key="search.everywhere.popup/91.0.1445.864@91.0.1445.864" timestamp="1578953880703" />
+    <state x="477" y="182" width="672" height="678" key="search.everywhere.popup/91.0.1445.864@91.0.1445.864" timestamp="1579059142080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,9 +325,39 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/passoff/SpellTest.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/passoff/SpellTest.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/passoff/SpellTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/spell/SpellCorrector.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="78" />
+          <line>46</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/spell/SpellCorrector.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/spell/SpellCorrector.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/spell/SpellCorrector.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

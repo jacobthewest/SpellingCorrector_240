@@ -1,13 +1,11 @@
 package spell;
 
 import java.awt.*;
-import java.awt.desktop.SystemSleepEvent;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import org.junit.jupiter.api.TestReporter;
 import spell.Trie.Node;
 
 public class SpellCorrector implements ISpellCorrector {

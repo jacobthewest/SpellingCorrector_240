@@ -25,12 +25,11 @@ public class SpellCorrector implements ISpellCorrector {
         String currentString;
         boolean errorFree = true;
 
-        while(errorFree) {
-            try{
+        while (errorFree) {
+            try {
                 currentString = scanner.next().toLowerCase();
                 trie.add(currentString);
-            }
-            catch(NoSuchElementException e) { // We have processed all of the words
+            } catch (NoSuchElementException e) { // We have processed all of the words
                 errorFree = false;
             }
         }
@@ -58,21 +57,22 @@ public class SpellCorrector implements ISpellCorrector {
         inputWord = inputWord.toLowerCase();
         Set<String> editDistance1 = new TreeSet<String>();
 
+        // First see if the input word exists already. If not, then proceed
         if (dictionary.find(inputWord) != null) { // They searched for a valid word
             return inputWord;
-        }
-        // If we didn't return there ^^^ then the input word is invalid. Time for some work.
-        else {
+        } else {  // Input word is invalid
+            String masterSuggestion = null;
             insertionDistance(inputWord, editDistance1);
-            alterationDistance(inputWord, editDistance1);
             deletionDistance(inputWord, editDistance1);
+            alterationDistance(inputWord, editDistance1);
             transpositionDistance(inputWord, editDistance1);
 
-            String masterSuggestion = getMasterSuggestion(editDistance1);
+            // Get the masterSuggestion
+            masterSuggestion = getMasterSuggestion(editDistance1);
             if (masterSuggestion == null) {
-                Set<String> editDistance2 = makeDistance2(editDistance1);
+                Set<String> editDistance2 = makeEditDistance2(editDistance1);
                 masterSuggestion = getMasterSuggestion(editDistance2);
-                if (masterSuggestion == null) {
+                if(masterSuggestion == null) {
                     return null;
                 }
             }
@@ -80,25 +80,24 @@ public class SpellCorrector implements ISpellCorrector {
         }
     }
 
+    public Set<String> makeEditDistance2(Set<String> editDistance1) {
+        Set<String> editDistance2 = new TreeSet<String>();
+        for(String eachWord: editDistance1) {
+            insertionDistance(eachWord, editDistance2);
+            deletionDistance(eachWord, editDistance2);
+            alterationDistance(eachWord, editDistance2);
+            transpositionDistance(eachWord, editDistance2);
+        }
+        return editDistance2;
+    }
+
     public void insertionDistance(String inputWord, Set<String> editDistance1) {
         for (int i = 0; i < (inputWord.length() + 1); i++) {
             for (char curr_char = 'a'; curr_char <= 'z'; curr_char++) {
-                StringBuilder tempWord = new StringBuilder(inputWord);
-                tempWord.insert(i, curr_char);
-                editDistance1.add(tempWord.toString());
+                StringBuilder addMe = new StringBuilder(inputWord);
+                addMe.insert(i, curr_char);
+                editDistance1.add(addMe.toString());
             }
-        }
-    }
-
-    public void alterationDistance(String inputWord, Set<String> editDistance1) {
-        char[] tempAltString = inputWord.toCharArray();
-        for (int i = 0; i < inputWord.length(); i++) {
-            for (char curr_char = 'a'; curr_char <= 'z'; curr_char++) {
-                tempAltString[i] = curr_char;
-                String newString = new String(tempAltString);
-                editDistance1.add(newString);
-            }
-            tempAltString = inputWord.toCharArray(); // Reset the word to normal
         }
     }
 
@@ -123,20 +122,32 @@ public class SpellCorrector implements ISpellCorrector {
         return editDistance2;
     }
 
+    public void alterationDistance(String inputWord, Set<String> editDistance1) {
+        char[] charArray = inputWord.toCharArray();
+        for (int i = 0; i < inputWord.length(); i++) {
+            for (char curr_char = 'a'; curr_char <= 'z'; curr_char++) {
+                charArray[i] = curr_char;
+                String addMe = new String(charArray);
+                editDistance1.add(addMe.toString());
+            }
+            charArray = inputWord.toCharArray();
+        }
+    }
+
     public void transpositionDistance(String inputWord, Set<String> editDistance1) {
-        char[] tempTranspositionString = inputWord.toCharArray();
-        for(int i = 0; i < (inputWord.length() - 1); i++) {
+        char[] charArray = inputWord.toCharArray();
+        for (int i = 0; i < (inputWord.length() - 1); i++) {
 
-            // Swap chars
-            char leftChar = tempTranspositionString[i];
-            char rightChar = tempTranspositionString[i + 1];
-            tempTranspositionString[i] = rightChar;
-            tempTranspositionString[i + 1] = leftChar;
+            // Swap the chars
+            char left = charArray[i];
+            char right = charArray[i + 1];
+            charArray[i] = right;
+            charArray[i + 1] = left;
 
-            String transposedString = new String(tempTranspositionString);
-            editDistance1.add(transposedString);
-
-            tempTranspositionString = inputWord.toCharArray();
+            // Build a sting and add it to the set
+            String addMe = new String(charArray);
+            editDistance1.add(addMe);
+            charArray = inputWord.toCharArray();
         }
     }
 }
